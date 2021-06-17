@@ -10,7 +10,6 @@ import (
 const error = "not found"
 
 // GetSecret get secret form vault.
-
 func GetSecret(address string, token string, secrets string) string {
 	s := strings.Fields(secrets)
 
