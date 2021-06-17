@@ -2,7 +2,7 @@ package main
 
 import (
 	"os"
-	"fmt"
+	"log"
 	"github.com/safe2008/vault-actions/pkg/vault"
 )
 
@@ -11,5 +11,5 @@ func main() {
 	token := os.Getenv("INPUT_TOKEN")
 	secrets := os.Getenv("INPUT_SECRETS")
 	result := vault.GetSecret(address, token, secrets)
-	fmt.Printf("%v", result)
+	log.Print(result)
 }
