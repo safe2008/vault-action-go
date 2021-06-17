@@ -1,8 +1,9 @@
 package main
 
 import (
-	"os"
 	"log"
+	"os"
+
 	"github.com/safe2008/vault-actions/pkg/vault"
 )
 
