@@ -8,7 +8,7 @@ jobs:
 
       - name: Import Vault Secrets
         id: secrets
-        uses: hashicorp/vault-action-go@main
+        uses: safe2008/vault-action-go@main
         with:
           url: ${{ secrets.VAULT_ADDR }}
           token: ${{ secrets.VAULT_TOKEN }}
