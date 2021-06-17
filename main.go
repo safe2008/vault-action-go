@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/safe2008/vault-action-go/pkg/vault"
+	"github.com/safe2008/vault-actions/pkg/vault"
 )
 
 func main() {

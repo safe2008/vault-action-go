@@ -17,6 +17,6 @@ RUN make build-for-container
 
 FROM ${FROM_IMAGE}
 
-COPY --from=builder /app/dist/vault-action-go-linux /bin/vault-action-go
+COPY --from=builder /app/dist/vault-actions-linux /bin/vault-actions
 
-ENTRYPOINT ["vault-action-go"]
+ENTRYPOINT ["vault-actions"]

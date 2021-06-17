@@ -1,9 +1,3 @@
 fileignoreconfig:
 - filename: go.sum
-  checksum: 712feaf4e8bd52dce18b8f6af08cca3f7ec0fa58508d5efb07c67b083c08b004
-- filename: main.go
-  checksum: 7598da086fd6a1fb69db64200b1efd257cddf5dcbc537131f79fdecf305b929d
-- filename: pkg/vault/api.go
-  checksum: def78841e7adbfcbf4532ac1bb3c231a6aa81c37121c6a97752300b34fc7adc8
-- filename: .github/workflows/integration.yml
-  checksum: 409ac584e14a743ec74a3a0eac25f1a77496eb4c46661497180784f8e5a78948
+  checksum: 9aab54a35900b2c36720cbf55843257eea6938717dbeb373e596796c3fb838a7
