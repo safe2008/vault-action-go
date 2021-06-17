@@ -10,7 +10,7 @@ jobs:
         id: secrets
         uses: safe2008/vault-actions@main
         with:
-          url: ${{ secrets.VAULT_ADDR }}
+          address: ${{ secrets.VAULT_ADDR }}
           token: ${{ secrets.VAULT_TOKEN }}
           secrets: "argocd/data/token admin"
 
