@@ -43,5 +43,5 @@ cut-tag:
 release: build-for-container
 	@echo "Releasing $(GIT_VERSION)"
 	docker build -t vault-actions .
-	docker tag vault-actions:latest boriphuth/vault-actions:$(GIT_VERSION)
-	docker push boriphuth/vault-actions:$(GIT_VERSION)
+	docker tag vault-actions:latest safe2008/vault-actions:$(GIT_VERSION)
+	docker push safe2008/vault-actions:$(GIT_VERSION)
