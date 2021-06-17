@@ -1,6 +1,6 @@
 export PATH := $(abspath ./vendor/bin):$(PATH)
 
-BASE_PACKAGE_NAME  = github.com/safe2008/vault-action-go
+BASE_PACKAGE_NAME  = github.com/safe2008/vault-actions
 GIT_VERSION = $(shell git describe --tags --always 2> /dev/null || echo 0.0.0)
 LDFLAGS            = -ldflags "-X $(BASE_PACKAGE_NAME)/pkg/info.Version=$(GIT_VERSION)"
 BUFFER            := $(shell mktemp)
@@ -9,10 +9,10 @@ COVER_PROFILE      = $(REPORT_DIR)/coverage.out
 
 .PHONY: build
 build:
-	CGO_ENABLED=0 go build $(LDFLAGS) -installsuffix cgo -o dist/vault-action-go main.go
+	CGO_ENABLED=0 go build $(LDFLAGS) -installsuffix cgo -o dist/vault-actions main.go
 
 build-for-container:
-	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build $(LDFLAGS) -a -installsuffix cgo -o dist/vault-action-go-linux main.go
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build $(LDFLAGS) -a -installsuffix cgo -o dist/vault-actions-linux main.go
 
 .PHONY: lint
 lint:
@@ -42,6 +42,6 @@ cut-tag:
 .PHONY: release
 release: build-for-container
 	@echo "Releasing $(GIT_VERSION)"
-	docker build -t vault-action-go .
-	docker tag vault-action-go:latest boriphuth/vault-action-go:$(GIT_VERSION)
-	docker push boriphuth/vault-action-go:$(GIT_VERSION)
+	docker build -t vault-actions .
+	docker tag vault-actions:latest boriphuth/vault-actions:$(GIT_VERSION)
+	docker push boriphuth/vault-actions:$(GIT_VERSION)
