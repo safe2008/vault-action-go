@@ -1,5 +1,3 @@
 fileignoreconfig:
-- filename: README.md
-  checksum: e88dad71acc66d284b243650185efdc53e239c155717521f1c02f5d613973c60
-- filename: go.sum
-  checksum: 6fa95b7575c135ed901e60f2ee563ddfe2c835f144d31bd30e951e8f9d43ce87
+- filename: .github/workflows/integration.yml
+  checksum: c71b4da11c80aa58cc71e968b80abc98a90ca43c9a86626332a7e7a52a24c17a
