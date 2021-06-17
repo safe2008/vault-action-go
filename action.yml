@@ -1,0 +1,16 @@
+name: "Get Vaule secret Action"
+description: "Get Vaule secret from GitHub"
+author: "safe2008"
+inputs:
+  address:
+    description: "Vaule server address"
+    required: true
+  token:
+    description: "Vaule token"
+    required: true
+  secrets:
+    description: "Vaule secret"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
