@@ -1,2 +1,3 @@
 dist/*
 pkg/vault/api_test.go
+coverage.out
