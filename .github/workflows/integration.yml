@@ -12,13 +12,13 @@ jobs:
         with:
           address: ${{ secrets.VAULT_ADDR }}
           token: ${{ secrets.VAULT_TOKEN }}
-          secrets: "argocd/data/token admin"
+          secrets: "argocd/data/token admin | ARGOCD_TOKEN"
 
-      # - name: Self test
-      #   id: selftest
-      #   uses: safe2008/argocd-app-actions@main
-      #   with:
-      #     address: ${{ secrets.ARGOCD_ADDR }}
-      #     token: ${{ steps.secrets.outputs.ARGOCD_TOKEN }}
-      #     insecure: false
-      #     appName: horusec-platform
+      - name: Self test
+        id: selftest
+        uses: safe2008/argocd-app-actions@main
+        with:
+          address: ${{ secrets.ARGOCD_ADDR }}
+          token: ${{ steps.secrets.outputs.ARGOCD_TOKEN }}
+          insecure: false
+          appName: horusec-platform
