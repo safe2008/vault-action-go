@@ -1,3 +1,3 @@
 fileignoreconfig:
-- filename: .github/workflows/integration.yml
-  checksum: a1cf99de0fb83831ba52018d3d30d0d2dc30f9cbd23d2a28e02003fbe43d3809
+- filename: README.md
+  checksum: 055fa7626d18f982fe27e3c1b0205ae75bd5348f339ad1ae0021dc2ed79050e9
